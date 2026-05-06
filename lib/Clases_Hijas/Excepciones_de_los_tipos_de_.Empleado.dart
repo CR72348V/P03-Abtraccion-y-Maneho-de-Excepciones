@@ -1,5 +1,7 @@
+//Empleado Admisntrativo
 class BonoInvalidoException implements Exception {
   final String message;
+
 
   BonoInvalidoException(this.message);
 
@@ -8,6 +10,7 @@ class BonoInvalidoException implements Exception {
 }
 
 
+//Empleado Gerente
 class PorcentajeComisionInvalidoException implements Exception {
   final String message;
 
@@ -18,6 +21,7 @@ class PorcentajeComisionInvalidoException implements Exception {
 }
 
 
+//Empleado Operativo
 class HorasExtrasInvalidaException implements Exception {
   final String message;
 

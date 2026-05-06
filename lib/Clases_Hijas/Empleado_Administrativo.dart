@@ -1,5 +1,5 @@
 import 'package:abstarccion_y_manejo_de_excepciones/Clase_Principal/Empleado.dart';
-import 'package:abstarccion_y_manejo_de_excepciones/Clases_Hijas/Excepciones.dart';
+import 'package:abstarccion_y_manejo_de_excepciones/Clases_Hijas/Excepciones_de_los_tipos_de_.Empleado.dart';
 
 class EmpleadoAdministrativo extends Empleado{
   double _bonoAdministrativo;
@@ -21,6 +21,16 @@ static double _comprobarBono(double bonoAdministrativo){
 
 double get bonoAdministrativo => _bonoAdministrativo;
 
+
+@override
+  void mostrarInfo(){
+    super.mostrarInfo();
+
+    print("El bono es: $_bonoAdministrativo");
+    print("El salario final es: ${calcularSalario()}");
+    print("El tipo del empleado es: ${tipoEmpleado()}");
+
+  }
 
 @override
 String tipoEmpleado() => "Administrativo";

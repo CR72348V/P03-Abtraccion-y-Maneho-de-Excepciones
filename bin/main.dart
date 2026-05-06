@@ -30,6 +30,7 @@ import 'package:abstarccion_y_manejo_de_excepciones/Clases_Hijas/Empleado_Operat
 
           print("Salario base:");
           salarioBase = Empleado.comprobarSalarioBase(double.parse(stdin.readLineSync()!));
+
         }catch(e){
           print(e);
           continue;

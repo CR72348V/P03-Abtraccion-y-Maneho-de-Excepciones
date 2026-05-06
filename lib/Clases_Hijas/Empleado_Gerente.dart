@@ -1,5 +1,5 @@
 import 'package:abstarccion_y_manejo_de_excepciones/Clase_Principal/Empleado.dart';
-import 'package:abstarccion_y_manejo_de_excepciones/Clases_Hijas/Excepciones.dart';
+import 'package:abstarccion_y_manejo_de_excepciones/Clases_Hijas/Excepciones_de_los_tipos_de_.Empleado.dart';
 
 class EmpleadoGerente extends Empleado {
   double _porcentajeComision;
@@ -20,6 +20,16 @@ class EmpleadoGerente extends Empleado {
   }
 
   double get porcentajeComision => _porcentajeComision; 
+
+  @override
+  void mostrarInfo(){
+    super.mostrarInfo();
+
+    print("El bono es: $_porcentajeComision");
+    print("El salario final es: ${calcularSalario()}");
+    print("El tipo del empleado es: ${tipoEmpleado()}");
+
+  }
   
 
   @override

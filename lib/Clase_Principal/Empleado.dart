@@ -30,6 +30,7 @@ abstract class Empleado {
     }
     return salarioBase;
   }
+  
   String get nombre => _nombre;
   int get edad => _edad;
   double get salarioBase => _salarioBase;

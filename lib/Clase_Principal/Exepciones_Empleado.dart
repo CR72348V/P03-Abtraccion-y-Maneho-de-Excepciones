@@ -18,6 +18,16 @@ class EdadInvalidaException implements Exception {
 }
 
 
+class SalarioInvalidoException implements Exception {
+  final String mensaje;
+
+  SalarioInvalidoException(this.mensaje);
+
+  @override
+  String toString() => 'SalarioInvalidoException: $mensaje';
+}
+
+
 class OperacionInvalidaException implements Exception {
   final String mensaje;
 
@@ -28,11 +38,3 @@ class OperacionInvalidaException implements Exception {
 }
 
 
-class SalarioInvalidoException implements Exception {
-  final String mensaje;
-
-  SalarioInvalidoException(this.mensaje);
-
-  @override
-  String toString() => 'SalarioInvalidoException: $mensaje';
-}

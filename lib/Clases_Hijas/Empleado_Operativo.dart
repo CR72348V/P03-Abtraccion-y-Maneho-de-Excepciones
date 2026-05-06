@@ -1,5 +1,5 @@
 import 'package:abstarccion_y_manejo_de_excepciones/Clase_Principal/Empleado.dart';
-import 'package:abstarccion_y_manejo_de_excepciones/Clases_Hijas/Excepciones.dart';
+import 'package:abstarccion_y_manejo_de_excepciones/Clases_Hijas/Excepciones_de_los_tipos_de_.Empleado.dart';
 
 class EmpleadoOperativo extends Empleado {
   double _horasExtras;
@@ -24,6 +24,16 @@ class EmpleadoOperativo extends Empleado {
 
   double get horasExtras => _horasExtras;
   double get pagoxHora => _pagoxHora;
+
+  @override
+  void mostrarInfo(){
+    super.mostrarInfo();
+
+    print("El bono es: $_horasExtras");
+    print("El salario final es: ${calcularSalario()}");
+    print("El tipo del empleado es: ${tipoEmpleado()}");
+
+  }
 
 
   @override
