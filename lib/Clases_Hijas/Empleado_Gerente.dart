@@ -13,11 +13,11 @@ class EmpleadoGerente extends Empleado {
       super(nombre, edad, salarioBase);
 
   static double _comprobarPorcentajeComision(double porcentajeComision){
-    if(porcentajeComision < 0){
+    if(porcentajeComision < 0.0){
       throw PorcentajeComisionInvalidoException("Error, No existe comision negativa");
     }
-    if(porcentajeComision > 100){
-      throw PorcentajeComisionInvalidoException("Error, El porcentaje de comision maximo es del 100%");
+    if(porcentajeComision > 1){
+      throw PorcentajeComisionInvalidoException("Error, El porcentaje de comision maximo es del 1 (100%)");
     }
     return porcentajeComision;
   }

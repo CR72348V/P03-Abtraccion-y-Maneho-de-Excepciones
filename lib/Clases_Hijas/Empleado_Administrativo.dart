@@ -16,9 +16,6 @@ static double _comprobarBono(double bonoAdministrativo){
   if(bonoAdministrativo < 0){
     throw BonoInvalidoException("Error, El bono no puede ser negativo");
   }
-  if(bonoAdministrativo > 1){
-    throw BonoInvalidoException("Error, El bono no puede ser mayor al 1");
-  }
   return bonoAdministrativo;
 }
 
