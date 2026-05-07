@@ -34,8 +34,8 @@ abstract class Empleado {
     if (salarioBase < 0) {
       throw SalarioInvalidoException("Error, El salario base no puede ser negativo");
     }
-    if(salarioBase < 315.04){
-      throw SalarioInvalidoException("Error, El salario base es invalido, no puede ser menor al salario minimo diario = 315.04");
+    if(salarioBase < 9582.47 ){
+      throw SalarioInvalidoException("Error, El salario base es invalido, no puede se menor al salario minimo mensual = 9,582.47");
     }
     return salarioBase;
   }

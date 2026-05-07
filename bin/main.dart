@@ -28,8 +28,10 @@ import 'package:abstarccion_y_manejo_de_excepciones/Clases_Hijas/Empleado_Operat
           print("Edad:");
           edad = Empleado.comprobarEdad(int.parse(stdin.readLineSync()!));
 
-          print("Salario base:");
+          print("Salario base (Mensual):");
           salarioBase = Empleado.comprobarSalarioBase(double.parse(stdin.readLineSync()!));
+
+          
 
         }catch(e){
           print(e);
