@@ -14,7 +14,10 @@ class EmpleadoGerente extends Empleado {
 
   static double _comprobarPorcentajeComision(double porcentajeComision){
     if(porcentajeComision < 0){
-      throw PorcentajeComisionInvalidoException("No existe comision negativa");
+      throw PorcentajeComisionInvalidoException("Error, No existe comision negativa");
+    }
+    if(porcentajeComision > 100){
+      throw PorcentajeComisionInvalidoException("Error, El porcentaje de comision maximo es del 100%");
     }
     return porcentajeComision;
   }
@@ -28,10 +31,8 @@ class EmpleadoGerente extends Empleado {
     print("El bono es: $_porcentajeComision");
     print("El salario final es: ${calcularSalario()}");
     print("El tipo del empleado es: ${tipoEmpleado()}");
-
   }
   
-
   @override
   String tipoEmpleado() => "Gerente";
  

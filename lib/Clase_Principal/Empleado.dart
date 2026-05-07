@@ -12,21 +12,30 @@ abstract class Empleado {
 
   static String comprobarNombre(String nombre){
     if(nombre.isEmpty){
-      throw NombreInvalidoException("El nombre no puede estar vacio");
+      throw NombreInvalidoException("Error, El nombre no puede estar vacio");
     }
     return nombre;
   }
 
   static int comprobarEdad(int edad){
+    if(edad < 0){
+      throw EdadInvalidaException("Error, La edad no puede ser menor a 0");
+    }
     if(edad < 18){
-      throw EdadInvalidaException("La edad no puede ser menor a 18");
+      throw EdadInvalidaException("Error, La edad no puede ser menor a 18");
+    }
+    if(edad > 100){
+      throw EdadInvalidaException("Error, La edad no puede ser mayor a 100 ");
     }
     return edad;
   }
 
   static double comprobarSalarioBase(double salarioBase) {
     if (salarioBase < 0) {
-      throw SalarioInvalidoException("El salario base no puede ser negativo");
+      throw SalarioInvalidoException("Error, El salario base no puede ser negativo");
+    }
+    if(salarioBase < 315.04){
+      throw SalarioInvalidoException("Error, El salario base es invalido, no puede ser menor al salario minimo diario = 315.04");
     }
     return salarioBase;
   }

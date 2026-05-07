@@ -17,7 +17,10 @@ class EmpleadoOperativo extends Empleado {
 
   static double _horasExtra(double horasExtra){
     if(horasExtra < 0){
-      throw HorasExtrasInvalidaException("No hay horas negativas");
+      throw HorasExtrasInvalidaException("Error, No hay horas negativas");
+    }
+    if(horasExtra > 39){
+      throw HorasExtrasInvalidaException("Error, El maximo de horas extras al mes es de: 39");
     }
     return horasExtra;
   }
